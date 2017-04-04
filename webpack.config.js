@@ -1,0 +1,24 @@
+let path = require('path')
+
+module.exports = {
+  entry: ['./app/index.js', './app/styles/main.sass'],
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  watch: true,
+  module: {
+    rules: [{
+      test: /\.sass$/,
+      use: [{
+        loader: "style-loader" // creates style nodes from JS strings
+      }, {
+        loader: "css-loader" // translates CSS into CommonJS
+      }, {
+        loader: "sass-loader" // compiles Sass to CSS
+      }]
+    }]
+  },
+  devtool: 'cheap-eval-source-map'
+}
+
