@@ -1,19 +1,71 @@
 @import "colors"
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px')
-@import url('https://fonts.googleapis.com/css?family=Rokkitt|Slabo+27px')
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
+* 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+html
+  height: 100%
+  width: 100%
 body 
-  background-color: darken($main-color, 30%)
-  color: lighten($main-color, 30%)
-  font-family: 'Rokkitt', serif;
 
-h1
-  color: $app-purple
-  font-family: 'Slabo 27px', serif;
-
+  background-color: lighten($main-color, 30%)
+  color: darken($main-color, 30%)
+  font-size: 1.1em
+  font-family: 'Josefin Sans', sans-serif
+  letter-spacing: 1.7
+nav
+  text-align: right 
+  display: flex
+  flex-direction: row
+  justify-content: space-between 
+  align-items: center
+  background: darken($peri-blue, 1%)
+#hamburger
+  font-size: 2em
+  text-align: center
+  padding: 0.5em
+  background: $rich-blue
+  color: lighten($coffee, 50%)
 a
-  color: $app-green
-
+  flex: 0 0 auto
+  color: darken($main-color, 30%)
+  text-decoration: none
+  width: 8em
+  padding: 1em
   &:hover
     background-color: $highlight
-
+header
+  display: flex
+  flex-direction: row
+  justify-content: center
+  padding: 4em
+h1
+  flex: 0 0 auto
+  align-self: auto
+  order: 0
+  color: darken($coffee, 30%)
+  width: 40%
+  font-weight: bold
+  font-family: 'Open Sans Condensed', sans-serif
+  font-size: 1.5em
+  font-style: italic
+  letter-spacing: 0.05em
+span
+  font-size: .5em
+.flex-container 
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  align-content: flex-start
+  align-items: flex-start
+  width: 100%
+  height: auto
+.cell
+  flex: 0 1 auto
+  align-self: center 
+  width: 30%
+  height: auto
